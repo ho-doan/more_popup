@@ -57,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
               childPopup: Text('widget.showPopup!'),
               width: 320,
               center: true,
+              showBottom: true,
               paddingPopup: 4,
               child: Icon(Icons.search),
             ),

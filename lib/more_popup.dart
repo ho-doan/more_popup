@@ -20,8 +20,10 @@ class ShowMoreTextPopup extends StatefulWidget {
     required this.childPopup,
     this.center = false,
     this.paddingPopup = 0,
+    this.showBottom,
   });
   final Widget child;
+  final bool? showBottom;
   final Widget childPopup;
   final bool center;
   final double? width;
@@ -114,7 +116,7 @@ class _ShowMoreTextPopupState extends State<ShowMoreTextPopup> {
     }
 
     double dy = _showRect.top;
-    if (dy <= (MediaQuery.of(context).size.height / 2)) {
+    if (widget.showBottom ?? dy <= (MediaQuery.of(context).size.height / 2)) {
       // not enough space above, show popup under the widget.
       dy = arrowHeight + _showRect.height + _showRect.top;
       _isDownArrow = false;
