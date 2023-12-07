@@ -1,3 +1,7 @@
+## 0.0.3
+
+* update property padding child
+
 ## 0.0.2
 
 * add property show bottom

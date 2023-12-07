@@ -21,6 +21,7 @@ class ShowMoreTextPopup extends StatefulWidget {
     this.center = false,
     this.paddingPopup = 0,
     this.showBottom,
+    this.paddingChild,
   });
   final Widget child;
   final bool? showBottom;
@@ -32,6 +33,7 @@ class ShowMoreTextPopup extends StatefulWidget {
   final Color? backgroundColor;
   final BorderRadius? borderRadius;
   final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? paddingChild;
 
   @override
   State<ShowMoreTextPopup> createState() => _ShowMoreTextPopupState();
@@ -172,7 +174,8 @@ class _ShowMoreTextPopupState extends State<ShowMoreTextPopup> {
                           ],
                         ),
                         child: Container(
-                          padding: const EdgeInsets.all(11),
+                          padding:
+                              widget.paddingChild ?? const EdgeInsets.all(11),
                           child: widget.childPopup,
                         ),
                       ),
