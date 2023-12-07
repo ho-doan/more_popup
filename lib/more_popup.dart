@@ -176,7 +176,9 @@ class _ShowMoreTextPopupState extends State<ShowMoreTextPopup> {
                         child: Container(
                           padding:
                               widget.paddingChild ?? const EdgeInsets.all(11),
-                          child: widget.childPopup,
+                          child: Center(
+                            child: widget.childPopup,
+                          ),
                         ),
                       ),
                     ],
